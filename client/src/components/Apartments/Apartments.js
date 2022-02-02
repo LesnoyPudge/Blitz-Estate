@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { ApartmentsList } from '.';
 import { useHttp } from '../../hooks/http.hook';
-import { useIsMobile } from '../../hooks/mobile.hook';
 import { ApartmentsFilterButton } from '.';
 // import { AddApartmentForm, DeleteApartmentForm, UpdateApartmentForm } from '.';
 import './index.scss';
@@ -13,10 +12,9 @@ export function Apartments(props) {
     const [apartments, setApartments] = useState(null);
     const [filteredApartments, setFilteredApartments] = useState(null);
     const [showedApartments, setShowedApartments] = useState(null);
-    const {isMobile} = useIsMobile;
     const [showLimit, setShowLimit] = useState({
-        toShow: ((props.showLimit) ? props.showLimit : (isMobile) ? 2 : 4),
-        step: ((props.step) ? props.step : (isMobile) ? 2 : 4)
+        toShow: ((props.showLimit) ? props.showLimit.toShow : 4),
+        step: ((props.showLimit) ? props.showLimit.step : 4)
     });
     const [activeItem, setActiveItem] = useState(0);
     const filterButtons = [
@@ -47,12 +45,10 @@ export function Apartments(props) {
         },
     ];
 
-    
 
     const fetchApartments = useCallback(async () => {
         try {
             const response = await request('./api/apartments/', 'GET', null, {});
-
             setApartments(response);
         } catch (error) {
             console.log(error);
@@ -85,13 +81,6 @@ export function Apartments(props) {
                 )
             )
         );
-    }
-
-    function resetShowLimit() {
-        setShowLimit(showLimit => ({
-            ...showLimit,
-            toShow: ((props.step) ? props.step : (isMobile) ? 2 : 4),
-        }))
     }
 
     useEffect(() => {
@@ -135,7 +124,6 @@ export function Apartments(props) {
                                                 isActive={activeItem === index}
                                                 onClick={(e) => {
                                                     filter(e);
-                                                    resetShowLimit();
                                                     setActiveItem(index);
                                                 }}
                                                 text={button.text}
