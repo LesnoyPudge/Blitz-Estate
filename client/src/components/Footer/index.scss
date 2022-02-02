@@ -1,0 +1,94 @@
+@import '../../vars';
+
+.footer {
+    background-color: #535860;
+    color: $font-secondary;
+
+    &__inner {}
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 30px;
+        padding: 40px 0;
+    }
+    &__item {
+        display: grid;
+        justify-content: center;  
+    }
+    &__logo {}
+    &__info {
+        display: grid;
+        grid-template: 
+            'schedule schedule' 
+            'address  address' 
+            'ogrn     inn'
+        ;
+        row-gap: 10px;
+        line-height: 1.5;
+    }
+    &__schedule {
+        grid-area: schedule;
+    }
+    &__schedule-label {
+        font-size: 1.4rem;
+    }
+    &__schedule-time {}
+    &__address {
+        grid-area: address;
+        font-size: 1.8rem;
+    }
+    &__ogrn {
+        grid-area: ogrn;
+        font-size: 1.4rem;
+    }
+    &__inn {
+        grid-area: inn;
+        font-size: 1.4rem;
+    }
+    &__phone {
+        row-gap: 20px;
+    }
+    &__phone-number {}
+    &__phone-button {
+        border: none;
+        color: $font-primary;
+        font-size: 1.8rem;
+        font-weight: 600;
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+    .footer {
+        &__list {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__item {
+            &:last-child {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        &__list {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        &__item {
+            &:last-child {
+                grid-column-start: unset;
+                grid-column-end: unset;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+
+}

@@ -1,0 +1,119 @@
+@import '../../vars';
+
+.header {
+    min-height: 100vh;
+    background-color: #eef3fa;
+    background-image: url('../../../public/images/header-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 60px;
+
+    &__inner {
+        padding-top: 172px;
+        margin-bottom: 70px;
+        position: relative;
+    }
+    &__navbar {
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 42px;
+        padding-bottom: 30px;
+    }
+    &__title {
+        font-size: 5rem;
+        line-height: 1.5;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    &__section-subtitle {
+        text-align: start;
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        width: fit-content;
+        column-gap: 20px;
+    }
+    &__info-item {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        column-gap: 10px;
+    }
+    &__info-number {
+        font-size: 8rem;
+        font-weight: 300;
+    }
+    &__info-text {
+        line-height: 1.5;
+    }
+    &__champagne-prize {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: center;
+    }
+    &__champagne-text {
+        line-height: 1.5;
+    }
+    &__champagne-image {
+        width: 63px;
+        height: 73px;
+    }
+    &__button {
+        font-weight: 500;
+        font-size: 2rem;
+        color: white;
+        background-color: $bg-button-blue;
+        padding: 22px 30px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+    .header {
+        &__inner {
+            padding-top: 140px;
+        }
+        &__info {
+            grid-template-columns: auto 1fr;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        &__content {
+            row-gap: 28px;
+        }
+        &__title {
+            font-size: 4.5rem;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .header {
+        margin-bottom: 40px;
+        
+        &__inner {
+            margin-bottom: 20px;
+        }
+        &__content {
+            row-gap: 15px;
+        }
+        &__title {
+            font-size: 3rem;
+        }
+        &__info {
+            grid-template-columns: 1fr;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+}

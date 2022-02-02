@@ -1,0 +1,112 @@
+{
+    "length": 4,
+    "questions": [
+        {
+            "id": 0,
+            "type": "simple",
+            "title": "Выберите местоположение объекта",
+            "options": [
+                {
+                    "value": 0,
+                    "image": "test_step-1_option-1",
+                    "optionTitle": "В России",
+                    "nextId": 1
+                },
+                {
+                    "value": 1,
+                    "image": "test_step-1_option-2",
+                    "optionTitle": "В Европе",
+                    "nextId": 1
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "type": "simple",
+            "title": "Тип недвижимости",
+            "options": [
+                {
+                    "value": 0,
+                    "image": "test_step-1_option-1",
+                    "optionTitle": "Жилая",
+                    "nextId": 2
+                },
+                {
+                    "value": 1,
+                    "image": "test_step-1_option-2",
+                    "optionTitle": "Коммерческая",
+                    "nextId": 3
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "simple",
+            "title": "Дом или квартира?",
+            "options": [
+                {
+                    "value": 0,
+                    "image": "test_step-1_option-1",
+                    "optionTitle": "Дом",
+                    "nextId": 4
+                },
+                {
+                    "value": 1,
+                    "image": "test_step-1_option-2",
+                    "optionTitle": "Квартира",
+                    "nextId": 4
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "type": "complex",
+            "title": "Что вас интересует?",
+            "options": [
+                {
+                    "value": 0,
+                    "image": "test_step-1_option-1",
+                    "optionTitle": "Офис",
+                    "nextId": 4
+                },
+                {
+                    "value": 1,
+                    "image": "test_step-1_option-2",
+                    "optionTitle": "Склад",
+                    "nextId": 4
+                },
+                {
+                    "value": 2,
+                    "image": "test_step-1_option-1",
+                    "optionTitle": "Готовый бизнес",
+                    "nextId": 4
+                },
+                {
+                    "value": 3,
+                    "image": "test_step-1_option-1",
+                    "optionTitle": "Производство",
+                    "nextId": 4
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "type": "simple",
+            "title": "Способ оплаты",
+            "options": [
+                {
+                    "value": 0,
+                    "image": "test_step-1_option-1",
+                    "optionTitle": "Покупка",
+                    "nextId": "end"
+                },
+                {
+                    "value": 1,
+                    "image": "test_step-1_option-2",
+                    "optionTitle": "Аренда",
+                    "nextId": "end"
+                }
+            ]
+        }
+    ]
+}

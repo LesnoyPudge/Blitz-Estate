@@ -1,0 +1,116 @@
+@import '../../vars';
+
+.about-us {
+    background-color: #F6F6F6;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 64px 0;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    &__section-title {
+        text-align: start;
+        font-weight: 900;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        row-gap: 10px;
+    }
+    &__button {
+        padding: 17px 22px;
+        color: $font-secondary;
+        background-color: $bg-button-blue;
+        width: 50%;
+        border-radius: 10px;
+        font-size: 1.8rem;
+    }
+    &__galery {}
+}
+
+.galery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__primary-image {
+        height: 450px;
+    }
+    &__miniatures-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    &__miniature {
+        height: 106px;
+    }
+}
+
+.miniature {
+    cursor: pointer;
+    transition: 0.08s linear;
+
+    &--active {
+        outline: 3px solid #2A94E2;
+    }
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+    .about-us {
+        &__button {
+            width: 100%;
+        }
+    }
+
+    .galery {
+        &__miniatures-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .about-us {
+        &__inner {
+            grid-template-columns: 1fr;
+            padding: 30px 0;
+        }
+    }
+
+    .galery {
+        flex-direction: row;
+        
+        &__miniatures-list {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .about-us {
+        &__inner {
+            grid-template-columns: 1fr;
+            padding: 30px 0;
+        }
+    }
+
+    .galery {
+        flex-direction: column;
+        
+        &__primary-image {
+            height: 300px;
+        }
+        &__miniatures-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

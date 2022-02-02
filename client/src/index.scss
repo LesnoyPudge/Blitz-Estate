@@ -1,0 +1,128 @@
+@import'../node_modules/reset-css/sass/reset';
+@import './fonts';
+@import './vars';
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, 
+a:hover, 
+a:active, 
+a:visited {
+    color: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Geometria', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $bg-primary;
+    color: $font-primary;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    row-gap: 60px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+b {
+    font-weight: bold
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    text-align: center;
+
+    &:disabled {
+        cursor: not-allowed;
+        color: rgb(63, 63, 63);
+    }
+}
+
+.button-animation {
+    transition: 0.1s linear;
+    
+    &:hover {
+        transform: translate(0, 2px);
+    }
+}
+
+.section-title {
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-weight: 900;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (min-width: 993px) {
+    .scroll-padding {
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+}

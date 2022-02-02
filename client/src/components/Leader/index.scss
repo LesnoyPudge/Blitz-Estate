@@ -1,0 +1,76 @@
+@import '../../vars';
+
+.leader {
+    background-color: #EEF3FA;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 60% auto;
+        gap: 30px;
+        padding-top: 60px;
+        align-items: end;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    &__section-title {
+        text-align: start;
+    }
+    &__name {
+        font-size: 2.2rem;
+        font-weight: 900;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+    &__button {
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 17px 22px;
+        background-color: $bg-button-blue;
+        color: $font-secondary;
+        border-radius: 10px;
+        width: 50%;
+    }
+    &__image {
+        display: flex;
+        max-height: 534px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+    .leader {
+        &__inner {
+            gap: 15px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .leader {
+        &__inner {
+            grid-template-columns: 1fr;
+        }
+        &__image {
+            display: none;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .leader {
+        &__button {
+            width: 100%;
+        }
+    }
+}
