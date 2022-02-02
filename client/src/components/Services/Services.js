@@ -26,7 +26,7 @@ export function Services(props) {
                         Наши услуги на международном рынке
                     </h3>
                     
-                    <ul className="services__list" id="services-list">
+                    <ul className="services__list">
                         <li className="services__item services-item grid-row-start-1 grid-row-end-3" onMouseEnter={handlerEnter} onMouseLeave={handlerLeave} data-aos="fade-up">
                             <picture className="services-item__image">
                                 <source srcSet="./images/services-image-1.jpg" type="image/webp" />

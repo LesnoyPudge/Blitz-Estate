@@ -87,7 +87,6 @@
 
             &__description {
                 opacity: 1;
-                height: 200px;
             }
         }
     }
@@ -170,6 +169,26 @@
         &__list {
             grid-template-columns: 1fr 1fr;
         }
+    }
+    .services-item {
+        &__text p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -moz-box;
+            -moz-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-clamp: 2;
+            box-orient: vertical;
+        }
+        // &__inner {
+        //     background:rgba(37, 44, 56, 0.56);
+        // }
+        // &__description {
+        //     height: 100%;
+        //     opacity: 1;
+        // }
     }
 }
 
