@@ -51,7 +51,7 @@ export function Navbar(props) {
     function handleClick(e) {
         e.preventDefault();
         setIsOpen(false);
-        toggleWindowLock(false);
+        toggleWindowLock(true);
         scrollToElement(e.target.dataset.scroll)
     }
 
