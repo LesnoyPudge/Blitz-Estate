@@ -171,6 +171,9 @@
         }
     }
     .services-item {
+        &__content {
+            justify-content: end;
+        }
         &__text p {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -182,13 +185,16 @@
             line-clamp: 2;
             box-orient: vertical;
         }
-        // &__inner {
-        //     background:rgba(37, 44, 56, 0.56);
-        // }
-        // &__description {
-        //     height: 100%;
-        //     opacity: 1;
-        // }
+        &__inner {
+            background:rgba(37, 44, 56, 0.56);
+        }
+        &__description {
+            height: auto;
+            opacity: 1;
+        }
+        &__image {
+            filter: blur(2px);
+        }
     }
 }
 

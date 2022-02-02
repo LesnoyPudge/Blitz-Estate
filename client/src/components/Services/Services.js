@@ -1,3 +1,4 @@
+import { useIsMobile } from '../../hooks/mobile.hook';
 import { useTools } from '../../hooks/tools.hook';
 import { ModalOpenButton } from './../';
 import './index.scss';
@@ -6,15 +7,19 @@ import './index.scss';
 
 export function Services(props) {
     const {setHeight} = useTools();
+    const {isMobile} = useIsMobile();
     let target;
 
     function handlerEnter(e) {
+        if (isMobile) return;
+
         const item = e.target.closest('li');
         target = item.querySelector('[data-item=description]');
         setHeight(target);
     }
 
     function handlerLeave() {
+        if (isMobile) return;
         setHeight(target);
     }
 
